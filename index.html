@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>||-Sustentabilidad-||</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Color de fondo */
+            color: #333; /* Color de texto principal */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(170, 0, 255, 0.8); /* Color violeta metálico con transparencia */
+            border: 5px solid #7e57c2; /* Borde violeta metálico */
+            border-radius: 15px; /* Bordes redondos */
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2 { 
+            font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+        }
+        h1 {
+            font-size: 4em; /* Tamaño grande del título */
+            font-weight: normal; /* Texto en negrita */
+            color: #ff4081; /* Color rosa brillante */
+            text-shadow: 2px 2px 2px #7e57c2; /* Sombra de texto */
+            margin: 20px 0; /* Margen superior e inferior */
+        }
+        h2 {
+            font-size: 1.5em; /* Tamaño grande para los títulos de sección */
+            color: #ff4081; /* Color rosa brillante para los títulos de sección */
+            margin-top: 0; /* Eliminar margen superior por defecto */
+        }
+        section {
+            background-color: rgba(126, 87, 194, 0.8); /* Color de fondo violeta metálico con transparencia */
+            border: 5px solid #6a1b9a; /* Borde violeta metálico */
+            border-radius: 15px; /* Bordes redondos */
+            padding: 10px; /* Padding reducido para mostrar más fondo */
+            margin-bottom: 20px;
+            max-width: 95%; /* Ancho máximo del contenido de la sección */
+            margin-left: auto; /* Centrado horizontal */
+            margin-right: auto; /* Centrado horizontal */
+        }
+        .questionnaire button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px; /* Bordes redondos */
+        }
+        .questionnaire button.cancel {
+            background-color: #f44336; /* Rojo */
+        }
+        .comment label {
+            display: block;
+            font-size: 1.2em;
+            color: #7e57c2; /* Texto llamativo violeta metálico */
+            margin-bottom: 10px;
+        }
+        .comment textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px; /* Bordes redondos */
+            border: 2px solid #7e57c2; /* Borde violeta metálico */
+        }
+        .comment button {
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment button.accept {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+        .comment button.deny {
+            background-color: #f44336; /* Rojo */
+            color: white;
+        }
+        /* Estilo para el mensaje personalizado */
+        .custom-alert {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none; /* Inicialmente oculto */
+            z-index: 1000; /* Capa sobre todo */
+        }
+        .custom-alert p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .custom-alert button {
+            background-color: #f44336; /* Rojo */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function mostrarMensaje() {
+            var customAlert = document.querySelector('.custom-alert');
+            customAlert.style.display = 'block';
+        }
+
+        function cerrarMensaje() {
+            var customAlert = document.querySelector('.custom-alert');
+            customAlert.style.display = 'none';
+        }
+    </script>
+</head>
+<body style="background-image: url('https://articles-img.sftcdn.net/t_articles/auto-mapping-folder/sites/2/2023/03/fondo-aesthetic-cielo-noche.jpg')">
+    <br>
+    <header>
+        <h1>||-Sustentabilidad-||</h1>
+    </header>
+    <br>
+    <section>
+        <h2>Informacion Del Alumno(a):</h2>
+        <h3>Alumno(a):</h3>
+        <h4>Ortega Sanchez Vanessa Odette</h4>
+        <h3>Grado y Grupo:</h3>
+        <h4>4°CPM</h4>
+        <h3>Proyecto Final</h3>
+    </section>
+    <br>
+    <section class="questionnaire">
+        <h2>Cuestionario Sobre El Tema Sustentabilidad</h2>
+        <form onsubmit="mostrarMensaje(); return false;">
+            <ul>
+                <div style="border: 2px solid violet; padding: 10px; margin-bottom: 10px;">
+                    <label for="respuesta1" class="question"><h2>Pregunta 1:<br>¿Cómo podríamos reducir el consumo de plásticos de un solo uso?</h2></label><br>
+                    <textarea id="respuesta1" name="respuesta1" class="input-box" placeholder="Respuesta 1" rows="3"></textarea><br>
+                </div>
+                <br>
+                <br>
+                <div style="border: 2px solid violet; padding: 10px; margin-bottom: 10px;">
+                    <label for="respuesta2" class="question"><h2>Pregunta 2:<br>¿Qué prácticas pueden implementarse para promover la energía renovable en una comunidad?</h2></label><br>
+                    <textarea id="respuesta2" name="respuesta2" class="input-box" placeholder="Respuesta 2" rows="3"></textarea><br>
+                </div>
+                <br>
+                <br>
+                <div style="border: 2px solid violet; padding: 10px; margin-bottom: 10px;">
+                    <label for="respuesta3" class="question"><h2>Pregunta 3:<br>¿Cuáles son los beneficios de la agricultura orgánica para el medio ambiente?</h2></label><br>
+                    <textarea id="respuesta3" name="respuesta3" class="input-box" placeholder="Respuesta 3" rows="3"></textarea><br>
+                </div>
+                <br>
+                <br>
+                <div style="border: 2px solid violet; padding: 10px; margin-bottom: 10px;">
+                    <label for="respuesta4" class="question"><h2>Pregunta 4:<br>¿Cómo podría una empresa reducir su huella de carbono?</h2></label><br>
+                    <textarea id="respuesta4" name="respuesta4" class="input-box" placeholder="Respuesta 4" rows="3"></textarea><br>
+                </div>
+                <br>
+                <br>
+                <div style="border: 2px solid violet; padding: 10px; margin-bottom: 10px;">
+                    <label for="respuesta5" class="question"><h2>Pregunta 5:<br>¿Qué medidas personales podemos tomar para contribuir a la conservación del agua?</h2></label><br>
+                    <textarea id="respuesta5" name="respuesta5" class="input-box" placeholder="Respuesta 5" rows="3"></textarea><br>
+                </div>
+                <br>
+                <br>
+            </ul>
+            <button class="submit-button" style="background-color: green; color: white; border: none; padding: 10px 20px; cursor: pointer;" type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Mensaje de agradecimiento -->
+    <div class="custom-alert">
+        <p>Gracias por contestar nuestro cuestionario</p>
+        <button onclick="cerrarMensaje()">Cerrar</button>
+    </div>
+
+</body>
+</html>
